@@ -8,7 +8,7 @@ describe('Simple App testing', () => {
 
   it('Valid Login Test', async => {
     $('~username').setValue('alex');
-    $('~password').setValue('qerty');
+    $('~password').setValue('qwerty');
 
     $('~login').click();
 
@@ -18,7 +18,7 @@ describe('Simple App testing', () => {
   });
 
   it('Invalid Login Test', async => {
-    $('~username').setValue('shamique');
+    $('~username').setValue('alex');
     $('~password').setValue('12345');
 
     $('~login').click();
