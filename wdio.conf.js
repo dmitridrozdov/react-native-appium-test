@@ -18,7 +18,7 @@ exports.config = {
   // NPM script (see https://docs.npmjs.com/cli/run-script) then the current working
   // directory is where your package.json resides, so `wdio` will be called from there.
   //
-  specs: ['./__test__/*.js'],
+  specs: ['./appiumtests/*.js'],
   //   specs: ['./test/specs/**/*.js'],
   // Patterns to exclude.
   exclude: [
@@ -49,12 +49,13 @@ exports.config = {
   capabilities: [
     {
       maxInstances: 1,
-      browserName: '',
+      browserName: 'chrome',
       appiumVersion: '1.17.1',
       platformName: 'ios',
       platformVersion: '<Add emulators platform version>',
-      deviceName: '<Add emulator name>',
-      app: '<path to APK>',
+      deviceName: 'iPhone Simulator',
+      app:
+        '/Users/dmitri.drozdov/Library/Developer/Xcode/DerivedData/reactnative_test-ajqwbrxwvecprdcpxexokegjgose/Build/Products/Debug-iphonesimulator/reactnative_test.app',
       automationName: 'UiAutomator2',
       // maxInstances can get overwritten per capability. So if you have an in-house Selenium
       // grid with only 5 firefox instances available you can make sure that not more than
